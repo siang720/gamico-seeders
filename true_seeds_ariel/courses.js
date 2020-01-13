@@ -18,7 +18,7 @@ const courses = [
     intoMarketDate: new Date(), // 固定
     ratingAverage: 4, // 1~5 integer
     ratingCount: 2, // 1~6 integer
-    studentCount: 2, // 1~6 integer
+    studentCount: 0, // 預設為0，以保持學生人數計算正確
     CourseCategoryId: 1, // 依照類別種子資料輸入，參考seeders裡面Category-and-SubCategory
     CourseSubCategoryId: 11, // 依照類別種子資料輸入，參考seeders裡面Category-and-SubCategory
     UserId: 1, // 固定
