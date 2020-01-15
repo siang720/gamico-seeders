@@ -50,6 +50,57 @@ const lessons = [
 
 
 
+
+
+  // 所屬課程：Python 自學日記
+  {
+    lessonNumber: 1, // 這個單元在該門課程的排序
+    title: "Python 變數與資料型態",
+    intro: "1. Python 資料型態：數字、字串、布林值、列表 List、固定列表 Tuple、集合 Set、字典 Dictionary。2. Python 變數宣告與使用。",
+    contents: `<h1><span style="color: rgb(64, 64, 64);">前言</span></h1><p><span style="color: rgb(64, 64, 64);">在前一單元中我們了解了程式設計思維的概念和建立了 Python 的開發環境，在這一單元中我們將了解 Python 變數與資料型別以及如何操作字串。</span></p><h1><span style="color: rgb(64, 64, 64);">電腦最初的用途就是一台超大台計算機</span></h1><p><span style="color: rgb(64, 64, 64);">資料的儲存以及操作在程式設計中扮演非常重要的角色，因為最早的電腦程式就是一種大型的計算機（最早的電腦就稱為計算機），即便現在學校教授電腦科學概論往往都會把課程稱為計算機概論呢！在操作資料的過程中如何儲存資料就是非常重要的事情，一般而言資料儲存有分為暫時儲存的揮發性資料（儲存在記憶體中的變數資料）和持久性儲存的資料（例如：資料庫、檔案等），在這邊我們討論的是變數的資料。</span></p><h1><span style="color: rgb(64, 64, 64);">在 Python 世界，所有東西都是物件</span></h1><p><span style="color: rgb(64, 64, 64);">在 Python 世界中，所有東西都是物件，物件可以視為透明的箱子，裡面存了一些資料。物件會有自己的資料型別，決定它做什麼樣的操作。另外，又依據箱子內的值可否改變而分為</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">不可變物件</code><span style="color: rgb(64, 64, 64);">和</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">可變物件</code><span style="color: rgb(64, 64, 64);">。</span></p><p>在前面我們有提到資料可以儲存在記憶體中的變數，在 Python 中變數只是一種名稱，當給定值時不會將值複製，而是將名稱貼到給定的物件上（注意 Python 程式語言中的&nbsp;<code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">=</code><span style="color: rgb(64, 64, 64);">&nbsp;是給定值，</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">==</code><span style="color: rgb(64, 64, 64);">&nbsp;才是相等的意思）</span></p><p>談到資料，就不得不談一下資料型別（type），雖然在 Python 不用像 C 語言之類程式語言需要在變數前面定義資料型別（在 Python 中 class 類別和 type 類型幾乎代表同一件事情，class 類別則是定義物件的基礎），但物件的資料型別會影響資料操作，所以值得我們好好認識。在 Python 世界裡，可以分為以下幾種<code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">簡單</code><span style="color: rgb(64, 64, 64);">資料型別（可以想像成化學課中的原子）：</span></p><ol><li><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">bool</code><span style="color: rgb(64, 64, 64);">&nbsp;布林，分為&nbsp;</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">True</code><span style="color: rgb(64, 64, 64);">、</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">False</code><span style="color: rgb(64, 64, 64);">&nbsp;通常用於條件判斷</span></li><li><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">int</code><span style="color: rgb(64, 64, 64);">&nbsp;整數，例如：&nbsp;</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">10</code><span style="color: rgb(64, 64, 64);">、</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">999999</code></li><li><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">float</code><span style="color: rgb(64, 64, 64);">&nbsp;浮點數，係指有小數點的整數：</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">1.222</code><span style="color: rgb(64, 64, 64);">、</span><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">1.0e7</code><span style="color: rgb(64, 64, 64);">&nbsp;等同於 10 的 7 次方</span></li><li><code style="color: rgb(64, 64, 64); background-color: rgb(249, 242, 244);">string</code><span style="color: rgb(64, 64, 64);">&nbsp;字串，一串文字字元</span></li></ol><p><br></p>`,
+    videoURL: "https://www.youtube.com/embed/FMruNSjHOzQ",
+    image: "", // 不用填
+    totalTime: 18, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
+    isPreview: false, // 固定
+    visible: true, // 固定
+    CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+    createdAt: new Date(), // 固定
+    updatedAt: new Date() // 固定
+  },
+  {
+    lessonNumber: 2, // 這個單元在該門課程的排序
+    title: "Python 數字、字串的基本運算",
+    intro: "1. 算術運算：加減乘除、取餘數、小數除法、整數除法、開次方。2. 字串的表示法：單行、多行、跳脫字元。3. 字串的串接與重複。",
+    contents: `<h3><span style="color: rgb(48, 50, 51);">運算子</span></h3><p><span style="color: rgb(48, 50, 51);">Python有以下基礎的運算子</span></p><ul><li><span style="color: rgb(48, 50, 51);">算術運算子</span></li><li><span style="color: rgb(48, 50, 51);">+, -, *, /, %, //(取得整除的商數), ** (次方, 7**2 = 49)</span></li><li><span style="color: rgb(48, 50, 51);">關係運算子</span></li><li><span style="color: rgb(48, 50, 51);">==, !=, &gt;, &lt;, &gt;=, &lt;=</span></li><li><span style="color: rgb(48, 50, 51);">邏輯運算子</span></li><li><span style="color: rgb(48, 50, 51);">not, and, or</span></li><li><span style="color: rgb(48, 50, 51);">複合指定運算子</span></li><li><span style="color: rgb(48, 50, 51);">+=, -=, *=, /=, %=, //=, **=</span></li><li><span style="color: rgb(48, 50, 51);">判斷式</span></li><li><span style="color: rgb(48, 50, 51);">python 語言以冒號「:」以及縮排來表示程式區塊</span></li></ul><p><br></p>`,
+    videoURL: "https://www.youtube.com/embed/bLRa4TZ99aY",
+    image: "", // 不用填
+    totalTime: 18, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
+    isPreview: false, // 固定
+    visible: true, // 固定
+    CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+    createdAt: new Date(), // 固定
+    updatedAt: new Date() // 固定
+  },
+  {
+    lessonNumber: 3, // 這個單元在該門課程的排序
+    title: "Python 有序列表的基本運算 - List、Tuple",
+    intro: "1. List 可更動的有序列表。2. Tuple 不可更動的有序列表。3. 列表的索引操作，連續資料操作。",
+    contents: `<p><span style="color: rgb(25, 25, 25);">本文例項講述了Python list操作用法。分享給大家供大家參考，具體如下：</span></p><p><br></p><p><span style="color: rgb(25, 25, 25);">List是python中的基本資料結構之一，和Java中的ArrayList有些類似，支援動態的元素的增加。list還支援不同型別的元素在一個列表中，List is an Object。</span></p><p><strong style="color: rgb(25, 25, 25);">最基本的建立一個列表的方法</strong></p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:myList = [‘a’,’b’,’c’]</span></p><p><strong style="color: rgb(25, 25, 25);">Python list常見操作如下：</strong></p><p><span style="color: rgb(25, 25, 25);">建立列表</span></p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:sample_list = [‘a’,1,(‘a’,’b’)]</span></p><p>Python 列表操作</p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:sample_list = [‘a’,’b’,0,1,3]</span></p><p>得到列表中的某一個值</p><pre class="ql-syntax" spellcheck="false">
+ value_start = sample_list[0]
+ end_value = sample_list[-1]
+ </pre><p><span style="color: rgb(25, 25, 25);">刪除列表的第一個值</span></p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:del sample_list[0]</span></p><p>在列表中插入一個值</p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:sample_list[0:0] = [‘sample value’]</span></p><p>得到列表的長度</p><p><u style="color: rgb(25, 25, 25);">複製程式碼</u><span style="color: rgb(25, 25, 25);">&nbsp;程式碼如下:list_length = len(sample_list)</span></p><p><br></p>`,
+    videoURL: "https://www.youtube.com/embed/JLU5oc4_VtA",
+    image: "", // 不用填
+    totalTime: 17, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
+    isPreview: false, // 固定
+    visible: true, // 固定
+    CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+    createdAt: new Date(), // 固定
+    updatedAt: new Date() // 固定
+  },
+
+
+
   // 所屬課程：Vue.js 手牽手，一起嗑光全家桶
   {
     lessonNumber: 1, // 這個單元在該門課程的排序
@@ -61,7 +112,7 @@ const lessons = [
     totalTime: 10, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
     isPreview: false, // 固定
     visible: true, // 固定
-    CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+    CourseId: 3, // 對照courses.js裡面的課程順序(最小是1)
     createdAt: new Date(), // 固定
     updatedAt: new Date() // 固定
   },
@@ -85,7 +136,7 @@ const lessons = [
     totalTime: 16, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
     isPreview: false, // 固定
     visible: true, // 固定
-    CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+    CourseId: 3, // 對照courses.js裡面的課程順序(最小是1)
     createdAt: new Date(), // 固定
     updatedAt: new Date() // 固定
   },
@@ -146,10 +197,16 @@ const lessons = [
       totalTime: 37, // 依照youtube影片長度(分鐘計算，有秒數的話則無條件進位)
         isPreview: false, // 固定
           visible: true, // 固定
-            CourseId: 2, // 對照courses.js裡面的課程順序(最小是1)
+            CourseId: 3, // 對照courses.js裡面的課程順序(最小是1)
               createdAt: new Date(), // 固定
                 updatedAt: new Date() // 固定
   },
+
+
+
+
+
+
 ];
 
 module.exports = lessons;
