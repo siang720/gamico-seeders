@@ -5,7 +5,7 @@ const courses = [
     // 課程簡介
     description:
       "網頁教學如此淺顯易懂，就是金魚都能懂的網頁設計入門啦！請跟著Amos一步步的操作，讓我們踏出網頁的第一步吧。 ",
-    image: "", // 上傳到IMGUR再複製連結
+    image: "https://i.imgur.com/B8DwuX6.png", // 上傳到IMGUR再複製連結
     introVideo: "https://www.youtube.com/embed/qRHoSWpkbBo", // youtube嶔入
     teacherName: "Amos", // 老師名字
     // 老師介紹
